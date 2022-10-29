@@ -8,6 +8,6 @@ import javax.inject.Inject
 @HiltViewModel
 class CountriesListViewModel @Inject constructor(
     val repository: CountriesListRepository
-): ViewModel() {
+) : ViewModel() {
 
 }

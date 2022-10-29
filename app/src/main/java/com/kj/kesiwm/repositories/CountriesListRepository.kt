@@ -5,14 +5,8 @@ import com.kj.kesiwm.data.remote.model.Countries
 import retrofit2.Response
 import javax.inject.Inject
 
-interface CountriesListRepository {
-    suspend fun getCountriesList(): Response<Countries>
-}
-
-class CountriesListRepositoryImpl @Inject constructor(private val api: CountryApi) :
-    CountriesListRepository {
-    override suspend fun getCountriesList(): Response<Countries> {
+class CountriesListRepository @Inject constructor(private val api: CountryApi) {
+    suspend fun getCountriesList(): Response<Countries> {
         return api.getCountries()
     }
-
 }
